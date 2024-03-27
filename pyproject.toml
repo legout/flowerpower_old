@@ -1,0 +1,28 @@
+[project]
+name = "flowerpower"
+version = "0.1.0"
+description = "Add your description here"
+authors = [
+    { name = "Volker Lorrmann", email = "z0043ddz@macvgfd7qj3n6.speedport.ip" }
+]
+dependencies = [
+    "msgspec>=0.18.6",
+]
+readme = "README.md"
+requires-python = ">= 3.8"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.rye]
+managed = true
+dev-dependencies = [
+    "ipython>=8.22.2",
+]
+
+[tool.hatch.metadata]
+allow-direct-references = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/flowerpower"]
