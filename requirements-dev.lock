@@ -8,37 +8,76 @@
 #   with-sources: false
 
 -e file:.
+appnope==0.1.4
+    # via ipykernel
 asttokens==2.4.1
     # via stack-data
+comm==0.2.2
+    # via ipykernel
+debugpy==1.8.1
+    # via ipykernel
 decorator==5.1.1
     # via ipython
 executing==2.0.1
     # via stack-data
+ipykernel==6.29.4
 ipython==8.22.2
+    # via ipykernel
 jedi==0.19.1
     # via ipython
+jupyter-client==8.6.1
+    # via ipykernel
+jupyter-core==5.7.2
+    # via ipykernel
+    # via jupyter-client
 matplotlib-inline==0.1.6
+    # via ipykernel
     # via ipython
 msgspec==0.18.6
     # via flowerpower
+nest-asyncio==1.6.0
+    # via ipykernel
+packaging==24.0
+    # via ipykernel
 parso==0.8.3
     # via jedi
 pexpect==4.9.0
     # via ipython
+platformdirs==4.2.0
+    # via jupyter-core
 prompt-toolkit==3.0.43
     # via ipython
+psutil==5.9.8
+    # via ipykernel
 ptyprocess==0.7.0
     # via pexpect
 pure-eval==0.2.2
     # via stack-data
 pygments==2.17.2
     # via ipython
+python-dateutil==2.9.0.post0
+    # via jupyter-client
+pyyaml==6.0.1
+    # via flowerpower
+pyzmq==25.1.2
+    # via ipykernel
+    # via jupyter-client
 six==1.16.0
     # via asttokens
+    # via python-dateutil
 stack-data==0.6.3
     # via ipython
+toml==0.10.2
+    # via flowerpower
+tornado==6.4
+    # via ipykernel
+    # via jupyter-client
 traitlets==5.14.2
+    # via comm
+    # via ipykernel
     # via ipython
+    # via jupyter-client
+    # via jupyter-core
     # via matplotlib-inline
 wcwidth==0.2.13
     # via prompt-toolkit

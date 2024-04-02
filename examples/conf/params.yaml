@@ -1,0 +1,28 @@
+c: &base 3
+test:
+  _1_func1: 
+    a: 1
+    c: *base
+  _2_func2:
+    c: *base
+    b: 2
+
+# definitions: 
+#   steps:
+#     - step: &build-test
+#         name: Build and test
+#         script:
+#           - mvn package
+#         artifacts:
+#           - target/**
+
+
+# pipelines:
+#   branches:
+#     develop:
+#       - step: *build-test
+#     master:
+#       - step: 
+#           <<: *build-test
+#           name: Testing on Master #override
+#           ongoing: false #extension

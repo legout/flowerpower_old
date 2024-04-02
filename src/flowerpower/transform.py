@@ -1,28 +1,16 @@
-from dataclasses import dataclass
-import msgspec
-import os
-
-@dataclass
-class Params:
-    ...
+from .params import Params
+from abc import ABC, abstractmethod
 
 
-class Transformer:
-    def __init__(self, params: Params | None = None, cfg_path: str = "conf"):
-        self.cfg_path = cfg_path
-        if params is None:
-            self._load_params()
-        else:
-            self.params = params
+class Transformer(ABC):
+    def __init__(self, cfg_path: str = "conf"):
+        self._cfg_path = cfg_path
 
-    def _load_params(self):
-        path = os.path.join(self.cfg_path , f"params/{self.name}.toml")
-        print(path)
-        self.params = msgspec.toml.decode(open(path).read(), type=Params)
+        self._params = Params(self._cfg_path)  # .get(self.__class__.__name__)
 
-    def transform(self):
-        ...
+    @abstractmethod
+    def transform(self): ...
 
     @property
     def name(self):
-        return self.__class__.__name__.lower()
+        return self.__class__.__name__
