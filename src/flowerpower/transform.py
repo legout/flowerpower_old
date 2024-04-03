@@ -9,7 +9,8 @@ class Transformer(ABC):
         self._params = Params(self._cfg_path)  # .get(self.__class__.__name__)
 
     @abstractmethod
-    def transform(self): ...
+    def transform(self):
+        pass
 
     @property
     def name(self):

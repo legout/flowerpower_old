@@ -8,8 +8,13 @@ from typing import Any
 
 @dataclass
 class CatalogItem:
-    type: str
-    path: str
+    type: str  # file or dataset
+    format: str  # csv, parquet, json, etc
+    path: str  # bucket/key or local path
+    fs: str  # s3, file, etc
+
+    def asdict(self):
+        return asdict(self)
 
 
 class Catalog:
