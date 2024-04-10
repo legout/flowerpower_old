@@ -6,7 +6,7 @@ class Transformer(ABC):
     def __init__(self, cfg_path: str = "conf"):
         self._cfg_path = cfg_path
 
-        self._params = Params(self._cfg_path)  # .get(self.__class__.__name__)
+        self._params = Params(self._cfg_path)
 
     @abstractmethod
     def transform(self):
